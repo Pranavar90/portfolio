@@ -46,6 +46,7 @@ export function Contact() {
                 </a>
                 <a
                     href="/resume_pranav.pdf"
+                    download="resume_pranav.pdf"
                     target="_blank"
                     className="flex items-center gap-2 px-8 py-4 border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors"
                     onMouseEnter={() => setCursorType("hover")}
