@@ -9,9 +9,10 @@ interface CardProps {
     children: React.ReactNode;
     className?: string;
     onClick?: () => void;
+    tiltStrength?: number;
 }
 
-export function Card({ children, className, onClick }: CardProps) {
+export function Card({ children, className, onClick, tiltStrength = 15 }: CardProps) {
     const ref = useRef<HTMLDivElement>(null);
     const { setCursorType } = useCursor();
 
@@ -21,8 +22,8 @@ export function Card({ children, className, onClick }: CardProps) {
     const mouseX = useSpring(x, { stiffness: 500, damping: 100 });
     const mouseY = useSpring(y, { stiffness: 500, damping: 100 });
 
-    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["15deg", "-15deg"]);
-    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-15deg", "15deg"]);
+    const rotateX = useTransform(mouseY, [-0.5, 0.5], [`${tiltStrength}deg`, `-${tiltStrength}deg`]);
+    const rotateY = useTransform(mouseX, [-0.5, 0.5], [`-${tiltStrength}deg`, `${tiltStrength}deg`]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!ref.current) return;

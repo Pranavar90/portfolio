@@ -46,7 +46,7 @@ export function About() {
                     <div className="order-1 md:order-2 flex justify-center items-center">
                         <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                             <Image
-                                src="/images/` (324).jpg"
+                                src="/images/about-portrait-new-2.jpg"
                                 alt="Identity"
                                 fill
                                 className="object-cover"
