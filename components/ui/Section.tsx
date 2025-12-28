@@ -1,0 +1,32 @@
+"use client";
+
+import { motion, HTMLMotionProps } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { ReactNode, forwardRef } from "react";
+
+interface SectionProps extends HTMLMotionProps<"section"> {
+    children: ReactNode;
+    className?: string;
+    id?: string;
+}
+
+export const Section = forwardRef<HTMLElement, SectionProps>(
+    ({ children, className, id, ...props }, ref) => {
+        return (
+            <motion.section
+                ref={ref}
+                id={id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className={cn("min-h-screen w-full relative flex flex-col justify-center px-6 md:px-20 py-20", className)}
+                {...props}
+            >
+                {children}
+            </motion.section>
+        );
+    }
+);
+
+Section.displayName = "Section";

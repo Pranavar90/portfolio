@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force Rebuild */
+
+:root {
+    --background: #020203;
+    --foreground: #ededed;
+
+    --muted: #1c1c1e;
+    --muted-foreground: #a1a1aa;
+
+    --card: rgba(20, 20, 23, 0.4);
+    --card-foreground: #ffffff;
+
+    --accent: #2563eb;
+    --accent-foreground: #ffffff;
+}
+
+@layer base {
+    body {
+        @apply bg-background text-foreground antialiased;
+        cursor: none;
+    }
+}
+
+::selection {
+    background-color: var(--accent);
+    color: white;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
