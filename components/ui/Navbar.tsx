@@ -66,7 +66,6 @@ export function Navbar() {
                     </a>
                     <a
                         href="/resume_pranav.pdf"
-                        download="resume_pranav.pdf"
                         target="_blank"
                         className="text-white/80 hover:text-white hover:scale-105 transition-all flex items-center gap-2 text-sm font-semibold"
                         title="Resume"
