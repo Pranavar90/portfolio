@@ -70,7 +70,6 @@ export function Navbar() {
                         className="text-white/80 hover:text-white hover:scale-105 transition-all flex items-center gap-2 text-sm font-semibold"
                         title="Resume"
                     >
-                        <Download className="w-4 h-4" />
                         <span className="hidden lg:inline">Resume</span>
                     </a>
                 </div>
