@@ -2,6 +2,7 @@
 import { Navbar } from "@/components/ui/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { PersonalityDoodle } from "@/components/sections/PersonalityDoodle";
 import { ProfessionalJourney } from "@/components/sections/ProfessionalJourney";
 import { Experience } from "@/components/sections/Experience";
 import { Projects, ProjectsMobile } from "@/components/sections/Projects";
@@ -15,6 +16,7 @@ export default function Home() {
 
             <Hero />
             <About />
+            <PersonalityDoodle />
             <ProfessionalJourney />
 
             {/* Experience Timeline */}

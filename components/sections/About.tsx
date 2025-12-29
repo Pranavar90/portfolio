@@ -38,7 +38,7 @@ export function About() {
                             transition={{ delay: 1, duration: 0.5 }}
                             className="mt-8 text-lg text-muted-foreground/60"
                         >
-                            <p>Visakhapatnam, India • student @ Gitam University</p>
+                            <p>Love for mountains & travel • student @ Gitam University</p>
                         </motion.div>
                     </div>
 
